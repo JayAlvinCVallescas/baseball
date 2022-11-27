@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.admin import display
-from .models import Position, Person, Club, Play
+from .models import Position, Person, Club, Play, Match
 
 
 # Register your models here.
@@ -12,18 +12,21 @@ class PositionAdmin(admin.ModelAdmin):
 
 @admin.register(Person)
 class PositionAdmin(admin.ModelAdmin):
-    list_display =  ("lastname","firstname","height","width")
-    search_fields =  ("lastname","firstname","height","width")
+    list_display =  ("lastname","firstname","email","height","weight")
+    search_fields =  ("lastname","firstname","email","height","weight")
 
 @admin.register(Club)
 class PositionAdmin(admin.ModelAdmin):
-    list_display =  ("name","coach","dorm_latitude","dorm_longitude")
-    search_fields =  ("name","coach","dorm_latitude","dorm_longitude")
+    list_display =  ("name","coach","description","dorm_latitude","dorm_longitude","team_pic")
+    search_fields =  ("name","coach","description","dorm_latitude","dorm_longitude","team_pic")
 
 @admin.register(Play)
 class PositionAdmin(admin.ModelAdmin):
-    list_display =  ("player","team","string_no","pos","isActive")
-    search_fields =  ("player","team","string_no","pos","isActive")
+    list_display =  ("player","team","string_no","isActive","pos")
+    search_fields =  ("player","team","string_no","isActive","pos")
 
-
+@admin.register(Match)
+class PositionAdmin(admin.ModelAdmin):
+    list_display =  ("team1","team2","score_t1","score_t2","winner","game_date")
+    search_fields =  ("team1","team2","score_t1","score_t2","winner","game_date")
 
