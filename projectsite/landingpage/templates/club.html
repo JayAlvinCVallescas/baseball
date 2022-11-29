@@ -3,23 +3,25 @@
 
 {% block content %}
 <div class="container">
-    <p>
-      {{ header_text }}
-    </p>
-
-    <div class="row">
-        <ul class="list-unstyled">
-            {% for object in object_list %}
-            <li class="media">
-              <img class="mr-3" src="../media/img/{{object.team_pic}}" height="100px" alt="Generic placeholder image">
-              <div class="media-body">
-                <h5 class="mt-0 mb-1">{{object.name}}</h5>
-                {{object.description}}
-              </div>
-            </li>
-            <br>
-            {% endfor %}
-          </ul>
+    <h2 class="col-12 text-center mb-5">
+      <strong>{{ header_text }}</strong>
+    </h2>
+    <div class="col-12">
+        <div class="row">
+            <ul class="list-unstyled">
+                {% for object in object_list %}
+                <li class="media d-flex gap-3">
+                  <img class="mr-3 col-4" src="../media/img/{{object.team_pic}}" height="200px" width="100%" alt="Generic placeholder image">
+                  <div class="media-body">
+                      <h3 class="mt-0 mb-2"><strong>{{object.name}}</strong></h3>
+                    {{object.description}} <br>
+                      <button class="btn btn-primary mt-5"><a href="https://diamondnoace.fandom.com/wiki/Category:Teams" style="color:white">For More Info</a></button>
+                  </div>
+                </li>
+                <br>
+                {% endfor %}
+              </ul>
+        </div>
     </div>
   </div>
 

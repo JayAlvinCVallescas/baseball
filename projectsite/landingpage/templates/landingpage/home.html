@@ -3,9 +3,79 @@
 
 {% block content %}
 <div class="container">
-    <p>
-      Example inner page template
-    </p>
-  </div>
+    <div class="col-11 mx-auto" >
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <img src="{% static 'img/doabackground2.jpg' %}" alt="doabackground" width="100%" height="500px">
+            </div>
+            <div class="col-12 col-md-7">
+                <h1 class="mt-4 mb-4">Ace of Diamond</h1>
+                <p class="text-left" style="text-align:justify; text-indent: 50px;">Ace of Diamond is a Japanese baseball-themed manga series written and illustrated by Yuji Terajima.
+                    It was serialized in Kodansha's shōnen manga magazine Weekly Shōnen Magazine from May 2006 to January 2015.
+                    A sequel titled Ace of Diamond Act II was serialized from August 2015 to October 2022.
+                    With a stray pitch that completely missed the batter, Eijun Sawamura loses his final middle
+                    school baseball game. Frustrated by this defeat, Eijun and his teammates vow to reach the
+                    national tournament once they are in high school. But everything changes when a scout
+                    unexpectedly invites him to Tokyo's prestigious Seidou High School after seeing the potential
+                    in his unusual pitching style. Encouraged by his teammates, Eijun accepts the offer, ready to improve his
+                    skills and play at a much more competitive level of baseball.
+                    However, now surrounded by a large number of skilled players,
+                    Eijun struggles to find his place on the team. He declares that he will one day become the team's ace,
+                </p>
+                <button class=" btn btn-primary"><a href="https://www.bilibili.tv/en/video/2008161293" style="color: white;">Watch Now</a></button>
+
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <section class="pt-5 pb-5">
+              <div class="col-12 mb-4">
+                  <h3 class="mb-3 text-center"> <strong>ACE OF DIAMOND MANGA VOLUME</strong> </h3>
+              </div>
+
+              <div class="col-10 mx-auto">
+                <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <div class="row">
+
+                        <div class="col-md-3 mb-3">
+                            <img class="img-fluid" alt="100%x280" src="{% static 'img/aodcover/V1.png' %} ">
+                        </div>
+                          <div class="col-md-3 mb-3">
+                            <img class="img-fluid" alt="100%x280" src="{% static 'img/aodcover/V2.png' %}">
+                        </div>
+                          <div class="col-md-3 mb-3">
+                              <img class="img-fluid" alt="100%x280" src="{% static 'img/aodcover/V3.png' %}">
+                          </div>
+                          <div class="col-md-3 mb-3">
+                            <img class="img-fluid" alt="100%x280" src="{% static 'img/aodcover/V5.png' %}" width="100%">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="carousel-item">
+                      <div class="row">
+
+                        <div class="col-md-3 mb-3">
+                            <img class="img-fluid" alt="100%x280" src="{% static 'img/aodcover/V4.png' %}" width="100%">
+                        </div>
+                          <div class="col-md-3 mb-3">
+                            <img class="img-fluid" alt="100%x280" src="{% static 'img/aodcover/V6.png' %}">
+                        </div>
+                          <div class="col-md-3 mb-3">
+                              <img class="img-fluid" alt="100%x280" src="{% static 'img/aodcover/V7.png' %}">
+                          </div>
+                          <div class="col-md-3 mb-3">
+                            <img class="img-fluid" alt="100%x280" src="{% static 'img/aodcover/V8.png' %}">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </div>
+        </section>
+    </div>
+</div>
 
 {% endblock content %}

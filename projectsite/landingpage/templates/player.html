@@ -3,19 +3,19 @@
 
 {% block content %}
 <div class="container">
-    <p>
-      {{ header_text }}
-    </p>
+     <h2 class="col-12 text-center mb-5">
+      <strong>{{ header_text }}</strong>
+    </h2>
 
     <div class="row">
-
-        <table class="table table-sm">
-            <thead>
+    <div class="col-10 mx-auto">
+        <table class="table table-sm text-center">
+            <thead class="bg-primary text-light">
               <tr>
-                <th scope="col">Name</th>
-                <th scope="col">Team/Club</th>
-                <th scope="col">Position</th>
-                <th scope="col">Status</th>
+                <th class="py-3" scope="col">Name</th>
+                <th class="py-3" scope="col">Team/Club</th>
+                <th class="py-3" scope="col">Position</th>
+                <th class="py-3" scope="col">Status</th>
               </tr>
             </thead>
             <tbody>
@@ -26,11 +26,12 @@
                 <th scope="row">{{ object.player.firstname }} {{ object.player.lastname }}</th>
                 <td>{{ object.team.name }}</td>
                 <td>{{ object.pos.description }}</td>
-                <td>{% if object.isActive == True %} Active {% else %} Inactive {% endif %}</td>
+                  <td>{% if object.isActive == True %} <p class="text-success"> Active </p> {% else %} <p class="text-danger"> Inactive </p> {% endif %}</td>
               </tr>
               {% endfor %}
             </tbody>
           </table>
+    </div>
 
 
 

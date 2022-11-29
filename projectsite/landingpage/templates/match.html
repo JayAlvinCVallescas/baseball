@@ -3,17 +3,19 @@
 
 {% block content %}
 <div class="container">
-    <p>
-      {{ header_text }}
-    </p>
+    <h2 class="col-12 text-center mb-5">
+      <strong>{{ header_text }}</strong>
+    </h2>
 
     <div class="row">
-        <table class="table table-sm">
-            <thead>
+        <div class="col-10 mx-auto">
+
+        <table class="table table-sm text-center">
+            <thead class="bg-primary text-light">
               <tr>
-                <th scope="col">Matchup </th>
-                <th scope="col">Result</th>
-                <th scope="col">Winner</th>
+                <th class="py-3" scope="col">Matchup </th>
+                <th class="py-3" scope="col">Result</th>
+                <th class="py-3" scope="col">Winner</th>
 
               </tr>
             </thead>
@@ -22,13 +24,14 @@
                 <!-- note how to use the if statement below. the value of isActive is either True or False but we want to display "Active" or "Inactive" -->
                 {% for object in object_list %}
               <tr>
-                <th scope="row">{{ object.team1.name }} vs {{ object.team2.name }}</th>
+                <th scope="row"> <img src="{% static 'img/seidologo.png' %}" width="15px"> {{ object.team1.name }} vs {{ object.team2.name }} <span style="font-size: 20px"><b>Ys</b></span> </th>
                 <td>{{ object.score_t1 }}, {{ object.score_t2 }}</td>
                 <td>{{ object.winner.name }}</td>
               </tr>
               {% endfor %}
             </tbody>
           </table>
+        </div>
     </div>
   </div>
 
