@@ -3,20 +3,17 @@
 
 {% block content %}
 <div class="container">
-    <h2 class="col-12 text-center mb-5">
-      <strong>{{ header_text }}</strong>
+    <h2 class="text-center">
+        <b>{{ header_text }}</b>
     </h2>
 
     <div class="row">
-        <div class="col-10 mx-auto">
-
         <table class="table table-sm text-center">
             <thead class="bg-primary text-light">
               <tr>
-                <th class="py-3" scope="col">Matchup </th>
-                <th class="py-3" scope="col">Result</th>
-                <th class="py-3" scope="col">Winner</th>
-
+                <th class="py-3"  scope="col">Matchup </th>
+                <th  class="py-3" scope="col">Result</th>
+                <th  class="py-3" scope="col">Winner</th>
               </tr>
             </thead>
             <tbody>
@@ -31,8 +28,7 @@
               {% endfor %}
             </tbody>
           </table>
-        </div>
+          {% include 'includes/pagination.html' %}
     </div>
   </div>
-
 {% endblock content %}
